@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'includes/connection.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -48,7 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 ?>
 
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
 <link type="text/css" rel="stylesheet" id="dark-mode-general-link">
