@@ -49,11 +49,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <!DOCTYPE html>
 <html lang="en">
-<link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
-<link type="text/css" rel="stylesheet" id="dark-mode-general-link">
-<style lang="en" type="text/css" id="dark-mode-custom-style"></style>
-<style lang="en" type="text/css" id="dark-mode-native-style"></style>
-<style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,7 +68,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="cmstitel">Government</div>
             <div class="cmssubtitle">Login</div>
             <form method="POST" class="login-form">
-                <input type="email" id="user_email" name="user_email" placeholder="E-Mail">
+                <label class="input input-bordered flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" /><path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" /></svg>
+                    <input type="text" class="grow" id="user_email" name="user_email" placeholder="Email" />
+                </label>
                 <input type="password" id="user_password" name="user_password" placeholder="Passwort">
                 <input class="login-submit" type="submit" value="Einloggen">
                 <div class="form-check" style="margin-top:1vh;">
