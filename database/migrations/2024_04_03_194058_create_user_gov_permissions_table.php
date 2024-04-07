@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('user_gov_permissions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users');
             $table->boolean('admin');
             $table->boolean('auctions');
             $table->boolean('houses');
