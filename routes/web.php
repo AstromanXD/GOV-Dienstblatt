@@ -1,6 +1,19 @@
 <?php
 
-use Livewire\Volt\Volt;
+use Illuminate\Support\Facades\Route;
 
-Volt::route('/', 'users.index');
+Route::get('/', function () {
+    return view('welcome');
+});
 
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/dashboard', function () {
+    return view('gov.dashboard');
+});
+
+Route::get('/namechange', function () {
+    return view('gov.namechange');
+});
