@@ -37,12 +37,25 @@
                     <x-menu-separator />
                 @endif
 
-                <x-menu-item title="Dashboard" icon="o-sparkles" link="/dashboard" />
-                <x-menu-item title="Namechange" icon="o-sparkles" link="/namechange" />
-                <x-menu-sub title="Settings" icon="o-cog-6-tooth">
-                    <x-menu-item title="Wifi" icon="o-wifi" link="####" />
-                    <x-menu-item title="Archives" icon="o-archive-box" link="####" />
+                <x-menu-item title="Dashboard" icon="o-Sparkles" link="/dashboard" />
+                <x-menu-item title="Dokumente" icon="o-sparkles" link="/documents" />
+                <x-menu-item title="Namensänderung" icon="o-sparkles" link="/namechange" />
+                <x-menu-item title="Fahrzeugwartung" icon="" link="####" />
+                <x-menu-item title="Standesamt" icon="" link="registry_office" />
+                <x-menu-item  title="Kalender" icon="" link="/calender" />
+                <x-menu-item  title="Sicherheit" icon="" link="####" />
+                <x-menu-sub title="Immobilien" icon="o-Home">
+                    <x-menu-item title="Grundbuch" icon="o-book-open" link="####" />
+                    <x-menu-item title="Hauskarte" icon="o-map" link="####" />
+                    <x-menu-item title="Sozialwohnungen" icon="" link="####" />
+                    <x-menu-item title="Auktionsschlüssel" icon="o-key" link="####"/>
+                    <x-menu-item title="Auktionen" icon="o-key" link="####"/>
                 </x-menu-sub>
+                <x-menu-sub title="Einstellungen" icon="o-cog-6-tooth">
+                    <x-menu-item title="Personal" icon="o-user" link="####" />
+                    <x-menu-item title="Fahrzeuge" icon="o-truck" link="####"/>
+                </x-menu-sub>
+                <x-menu-item title=""></x-menu-item>
             </x-menu>
         </x-slot:sidebar>
 
