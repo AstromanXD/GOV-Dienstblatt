@@ -1,3 +1,11 @@
+@php
+$name = "Luis Rakete";
+$email = "luis.Vanbruck@gov.de";
+$user = new \App\Models\User();
+$user->name=$name;
+$user->email=$email;
+@endphp
+
 <x-app>
     <body class="min-h-screen font-sans antialiased bg-base-200/50 dark:bg-base-200">
 
@@ -24,18 +32,21 @@
             {{-- MENU --}}
             <x-menu activate-by-route>
 
-                {{-- User --}}
-                @if($user = auth()->user())
-                    <x-menu-separator />
+            {{-- User --}}
 
-                    <x-list-item :item="$user" value="name" sub-value="email" no-separator no-hover class="-mx-2 !-my-2 rounded">
+                <x-menu-separator />
+
+                    <x-list-item :item="$user" sub-value="email" sub-value  no-separator no-hover class="-mx-2 !-my-2 rounded">
+
                         <x-slot:actions>
-                            <x-button icon="o-power" class="btn-circle btn-ghost btn-xs" tooltip-left="logoff" no-wire-navigate link="/logout" />
+                            <x-button icon="o-power" class="btn-circle btn-ghost btn-xs join-item" tooltip-left="logoff" no-wire-navigate link="/logout" />
                         </x-slot:actions>
                     </x-list-item>
 
-                    <x-menu-separator />
-                @endif
+
+
+                <x-menu-separator />
+
 
                 <x-menu-item title="Dashboard" icon="o-Sparkles" link="/dashboard" />
                 <x-menu-item title="Dokumente" icon="o-sparkles" link="/documents" />
@@ -58,7 +69,7 @@
                 <x-menu vertical class="btm-nav">
                     <x-menu-item icon="o-power"/>
                     <x-menu-item icon="o-power"/>
-                </x-menu><
+                </x-menu>
             </x-menu>
 
         </x-slot:sidebar>
