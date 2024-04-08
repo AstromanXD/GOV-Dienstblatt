@@ -16,7 +16,7 @@
     {{-- MAIN --}}
     <x-main full-width>
         {{-- SIDEBAR --}}
-        <x-slot:sidebar drawer="main-drawer" collapsible class="bg-base-100 lg:bg-inherit">
+        <x-slot:sidebar drawer="main-drawer">
 
             {{-- BRAND --}}
             <x-app-brand class="p-5 pt-3" />
@@ -51,12 +51,16 @@
                     <x-menu-item title="Auktionsschlüssel" icon="o-key" link="####"/>
                     <x-menu-item title="Auktionen" icon="o-key" link="####"/>
                 </x-menu-sub>
-                <x-menu-sub title="Einstellungen" icon="o-cog-6-tooth">
+                <x-menu-sub title="Verwaltung" icon="o-cog-6-tooth">
                     <x-menu-item title="Personal" icon="o-user" link="####" />
                     <x-menu-item title="Fahrzeuge" icon="o-truck" link="####"/>
                 </x-menu-sub>
-                <x-menu-item title=""></x-menu-item>
+                <x-menu vertical class="btm-nav">
+                    <x-menu-item icon="o-power"/>
+                    <x-menu-item icon="o-power"/>
+                </x-menu><
             </x-menu>
+
         </x-slot:sidebar>
 
         {{-- The `$slot` goes here --}}
