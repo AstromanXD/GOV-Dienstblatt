@@ -1,9 +1,11 @@
 @php
 $name = "Luis Rakete";
 $email = "luis.Vanbruck@gov.de";
+$image = "https://i.imgur.com/VhCbB4S.jpeg";
 $user = new \App\Models\User();
 $user->name=$name;
 $user->email=$email;
+$user->image=$image;
 @endphp
 
 <x-app>
@@ -37,6 +39,7 @@ $user->email=$email;
                 <x-menu-separator />
 
                     <x-list-item :item="$user" sub-value="email" sub-value  no-separator no-hover class="-mx-2 !-my-2 rounded">
+
 
                         <x-slot:actions>
                             <x-button icon="o-power" class="btn-circle btn-ghost btn-xs join-item" tooltip-left="logoff" no-wire-navigate link="/logout" />
